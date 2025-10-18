@@ -5,10 +5,10 @@ function MinecraftServerModalContent() {
       <div className="mb-8">
         <h3 className="text-2xl font-bold text-gray-900 mb-4">Overview</h3>
         <p className="text-gray-700 leading-relaxed mb-4">
-          Created custom Minecraft Server ran on a DigitalOcean Droplet that viewers on Twitch.tv can control through donations and subscriptions using the Twitch API and Node.js. Viewers could spawn monsters and use potion effects on the streamer in-game.
+          Created a custom Minecraft Server running on a DigitalOcean Droplet that viewers on Twitch.tv could control through donations and subscriptions using the Twitch API and Node.js. Viewers could spawn monsters and apply potion effects to the streamer in-game.
         </p>
         <p className="text-gray-700 leading-relaxed">
-          The 3 months this server was implemented on the streamers channel, monthly subscriber average rose from <span className="font-bold">148 to 401 subscribers/month</span>, and the donation amount increased from <span className="font-bold">$423 to $1,219/month</span>.
+          During the 3 months this server was active on the streamer's channel, the monthly subscriber average rose from <span className="font-bold">148 to 401 subscribers/month</span>, and the donation amount increased from <span className="font-bold">$423 to $1,219/month</span>.
         </p>
       </div>
 
@@ -24,7 +24,7 @@ function MinecraftServerModalContent() {
               <span className="text-sm">Video: In-Chat Control</span>
             </div>
             <p className="text-gray-700 text-sm leading-relaxed">
-              The streamer and moderators have the ability <span className="font-bold text-green-600">in the Twitch Chat</span> to create, delete, and refresh API tokens of Minecraft Redemptions as a fail safe in case anything goes wrong.
+              The streamer and moderators can <span className="font-bold text-green-600">use Twitch Chat commands</span> to create, delete, and refresh API tokens for Minecraft Redemptions as a failsafe in case anything goes wrong.
             </p>
           </div>
 
@@ -35,7 +35,7 @@ function MinecraftServerModalContent() {
               <span className="text-sm">Video: In-Game Control</span>
             </div>
             <p className="text-gray-700 text-sm leading-relaxed">
-              The streamer and moderators have the ability <span className="font-bold text-green-600">in the Minecraft Server</span> to control the creation and deletion, as well as refresh API tokens of Minecraft Redemptions.
+              The streamer and moderators can <span className="font-bold text-green-600">use in-game commands</span> to create, delete, and refresh API tokens for Minecraft Redemptions.
             </p>
           </div>
 
@@ -57,7 +57,7 @@ function MinecraftServerModalContent() {
               <span className="text-sm">Video: Channel Points</span>
             </div>
             <p className="text-gray-700 text-sm leading-relaxed">
-              Viewer in chat used <span className="font-bold text-green-600">Channel Points</span> to spawn in mobs, allowing viewers who don't want to spend money to participate in the fun.
+              Viewers in chat could use <span className="font-bold text-green-600">Channel Points</span> to spawn mobs, allowing viewers who didn't want to spend money to participate in the fun.
             </p>
           </div>
 
@@ -68,10 +68,10 @@ function MinecraftServerModalContent() {
       <div className="bg-gradient-to-r from-green-50 to-blue-50 rounded-2xl p-8 mb-8">
         <h3 className="text-2xl font-bold text-gray-900 mb-4">Impact & Achievements</h3>
         <p className="text-gray-700 leading-relaxed mb-4">
-          This Minecraft Server as well as a few small robots we created helped raise over <span className="font-bold text-green-600 text-lg">$18,000</span> alongside a few other streamers for <span className="font-bold text-green-600">Make a Wish</span>.
+          This Minecraft Server, along with a few small robots we created, helped raise over <span className="font-bold text-green-600 text-lg">$18,000</span> alongside other streamers for <span className="font-bold text-green-600">Make-A-Wish</span>.
         </p>
         <p className="text-gray-700 leading-relaxed">
-          As well as <span className="font-bold text-blue-600 text-lg">$5,000</span> alongside a few other streamers for the <span className="font-bold text-blue-600">Australian Wildfires</span>.
+          It also helped raise <span className="font-bold text-blue-600 text-lg">$5,000</span> alongside other streamers for the <span className="font-bold text-blue-600">Australian Wildfires</span>.
         </p>
       </div>
 
@@ -79,10 +79,10 @@ function MinecraftServerModalContent() {
       <div className="mb-8">
         <h3 className="text-2xl font-bold text-gray-900 mb-4">Technical Implementation</h3>
         <p className="text-gray-700 leading-relaxed mb-4">
-          This project has been an almost 2 year process. It started out simply where a $1 donation would spawn a random mob or potion effect. This then lead to the implementation of subscriptions triggering 5 random mob spawns.
+          This project was an almost 2-year process. It started simply where a $1 donation would spawn a random mob or potion effect. This later evolved to include subscriptions triggering 5 random mob spawns.
         </p>
         <p className="text-gray-700 leading-relaxed">
-          I learned to read Channel Point Redemptions through the Twitch API, allowing viewers to spawn mobs and potion effects individually. I implemented the creation and deletion of channel point redemptions automatically with an in-game command and when the streamer logged on and off the server to better automate the process.
+          I learned to read Channel Point Redemptions through the Twitch API, allowing viewers to spawn mobs and apply potion effects individually. I implemented automatic creation and deletion of channel point redemptions through in-game commands and when the streamer logged on and off the server to better automate the process.
         </p>
       </div>
 
