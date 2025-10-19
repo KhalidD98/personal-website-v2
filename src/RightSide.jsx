@@ -1,9 +1,11 @@
 import { useState } from 'react'
 import ProjectModal from './components/ProjectModal'
 import MinecraftServerModalContent from './components/MinecraftServerModalContent'
+import AccessMyResearchModalContent from './components/AccessMyResearchModalContent'
 
 function RightSide() {
-  const [isModalOpen, setIsModalOpen] = useState(false)
+  const [isMinecraftModalOpen, setIsMinecraftModalOpen] = useState(false)
+  const [isAccessMyResearchModalOpen, setIsAccessMyResearchModalOpen] = useState(false)
 
   const minecraftProject = {
     title: 'Single Streamer Twitch Minecraft Server',
@@ -11,14 +13,24 @@ function RightSide() {
     content: <MinecraftServerModalContent />
   }
 
+  const accessMyResearchProject = {
+    title: 'Access My Research - Chat System',
+    subtitle: 'Vue.js & Firebase Project',
+    content: <AccessMyResearchModalContent />
+  }
+
   return (
     <div className="w-2/3 h-full overflow-y-auto bg-white">
       <div className="py-16 px-8">
 
-        {/* Bento Grid Layout */}
-        <div className="grid grid-cols-2 gap-6 auto-rows-auto">
+        {/* Experience Section */}
+        <div className="mb-12">
+          <h2 className="text-4xl font-bold text-gray-900 mb-8">Experience</h2>
 
-          {/* Card 1 - Lineleader - Large (spans 2 columns) */}
+          {/* Bento Grid Layout */}
+          <div className="grid grid-cols-2 gap-6 auto-rows-auto">
+
+            {/* Card 1 - Lineleader - Large (spans 2 columns) */}
           <div className="col-span-2">
             <div className="bg-white rounded-3xl shadow-lg border-2 border-blue-200 hover:shadow-xl transition-all duration-300 h-full">
               <div className="p-10">
@@ -64,7 +76,7 @@ function RightSide() {
 
           {/* Card 3 - Access My Research - Medium (1 column) */}
           <div className="col-span-1">
-            <div className="bg-white rounded-3xl shadow-lg border-2 border-blue-200 hover:shadow-xl transition-all duration-300 h-full">
+            <div className="bg-white rounded-3xl shadow-lg border-2 border-blue-200 hover:shadow-xl transition-all duration-300 h-full relative">
               <div className="p-8">
                 <div className="flex items-center justify-between mb-4">
                   <div>
@@ -73,6 +85,12 @@ function RightSide() {
                   </div>
                   <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-semibold">Experience</span>
                 </div>
+                <button
+                  onClick={() => setIsAccessMyResearchModalOpen(true)}
+                  className="absolute top-4 right-4 text-gray-400 hover:text-blue-600 transition-colors text-sm font-medium underline"
+                >
+                  View Details →
+                </button>
                 <p className="text-xs text-gray-500 mb-3">January 2020 - June 2020</p>
                 <p className="text-gray-600 mb-4 leading-relaxed text-base">Web application designed to connect users with researchers, increase access to publications, and act as a space for teams to work on research-related projects</p>
                 <ul className="space-y-2 text-gray-700 leading-relaxed text-sm">
@@ -82,6 +100,16 @@ function RightSide() {
               </div>
             </div>
           </div>
+
+          </div>
+        </div>
+
+        {/* Projects Section */}
+        <div className="mb-12">
+          <h2 className="text-4xl font-bold text-gray-900 mb-8">Projects</h2>
+
+          {/* Bento Grid Layout */}
+          <div className="grid grid-cols-2 gap-6 auto-rows-auto">
 
           {/* Card 4 - Single Streamer Minecraft - Medium (1 column) */}
           <div className="col-span-1">
@@ -97,7 +125,7 @@ function RightSide() {
                   </div>
                 </div>
                 <button
-                  onClick={() => setIsModalOpen(true)}
+                  onClick={() => setIsMinecraftModalOpen(true)}
                   className="absolute top-4 right-4 text-gray-400 hover:text-green-600 transition-colors text-sm font-medium underline"
                 >
                   View Details →
@@ -140,14 +168,22 @@ function RightSide() {
             </div>
           </div>
 
+          </div>
         </div>
+
       </div>
 
-      {/* Modal */}
+      {/* Modals */}
       <ProjectModal
-        isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
+        isOpen={isMinecraftModalOpen}
+        onClose={() => setIsMinecraftModalOpen(false)}
         project={minecraftProject}
+      />
+
+      <ProjectModal
+        isOpen={isAccessMyResearchModalOpen}
+        onClose={() => setIsAccessMyResearchModalOpen(false)}
+        project={accessMyResearchProject}
       />
     </div>
   )
