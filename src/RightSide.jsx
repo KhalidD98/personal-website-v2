@@ -20,7 +20,7 @@ function RightSide() {
   }
 
   return (
-    <div className="w-2/3 h-full overflow-y-auto bg-white">
+    <div className="w-full lg:w-2/3 min-h-screen lg:h-full lg:overflow-y-auto bg-white">
       <div className="py-16 px-8">
 
         {/* Experience Section */}
@@ -28,10 +28,10 @@ function RightSide() {
           <h2 className="text-4xl font-bold text-gray-900 mb-8">Experience</h2>
 
           {/* Bento Grid Layout */}
-          <div className="grid grid-cols-2 gap-6 auto-rows-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 auto-rows-auto">
 
             {/* Card 1 - Lineleader - Large (spans 2 columns) */}
-          <div className="col-span-2">
+          <div className="col-span-1 lg:col-span-2">
             <div className="bg-white rounded-3xl shadow-lg border-2 border-blue-200 hover:shadow-xl transition-all duration-300 h-full">
               <div className="p-10">
                 <div className="flex items-center justify-between mb-4">
@@ -109,7 +109,7 @@ function RightSide() {
           <h2 className="text-4xl font-bold text-gray-900 mb-8">Projects</h2>
 
           {/* Bento Grid Layout */}
-          <div className="grid grid-cols-2 gap-6 auto-rows-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 auto-rows-auto">
 
           {/* Card 4 - Single Streamer Minecraft - Medium (1 column) */}
           <div className="col-span-1">

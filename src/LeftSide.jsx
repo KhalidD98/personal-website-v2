@@ -2,7 +2,7 @@ import profilePicture from './assets/profilePicture.png'
 
 function LeftSide() {
   return (
-    <div className="w-1/3 h-full bg-gradient-to-b from-slate-50 to-slate-100 flex items-center justify-center p-16">
+    <div className="w-full lg:w-1/3 lg:min-h-screen lg:h-full bg-gradient-to-b from-slate-50 to-slate-100 flex items-center justify-center py-12 lg:py-16 px-8 lg:px-16">
       <div className="text-center">
         {/* Profile Picture with Shadow */}
         <div className="relative inline-block mb-10">
