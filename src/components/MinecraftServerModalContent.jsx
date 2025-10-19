@@ -1,3 +1,8 @@
+import InChatExample from '../assets/InChatExample.mp4'
+import InGameExample from '../assets/InGameExample.mp4'
+import LoginExample from '../assets/LoginExample.mp4'
+import exampleOne from '../assets/example_one.mp4'
+
 function MinecraftServerModalContent() {
   return (
     <>
@@ -19,9 +24,17 @@ function MinecraftServerModalContent() {
 
           {/* Example 1 */}
           <div className="bg-gray-50 rounded-2xl p-6">
-            <div className="bg-gray-300 rounded-xl h-48 mb-4 flex items-center justify-center text-gray-600">
-              {/* Placeholder for video/image */}
-              <span className="text-sm">Video: In-Chat Control</span>
+            <div className="rounded-xl overflow-hidden mb-4 bg-black">
+              <video
+                className="w-full h-auto"
+                autoPlay
+                loop
+                muted
+                playsInline
+              >
+                <source src={InChatExample} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
             </div>
             <p className="text-gray-700 text-sm leading-relaxed">
               The streamer and moderators can <span className="font-bold text-green-600">use Twitch Chat commands</span> to create, delete, and refresh API tokens for Minecraft Redemptions as a failsafe in case anything goes wrong.
@@ -30,9 +43,17 @@ function MinecraftServerModalContent() {
 
           {/* Example 2 */}
           <div className="bg-gray-50 rounded-2xl p-6">
-            <div className="bg-gray-300 rounded-xl h-48 mb-4 flex items-center justify-center text-gray-600">
-              {/* Placeholder for video/image */}
-              <span className="text-sm">Video: In-Game Control</span>
+            <div className="rounded-xl overflow-hidden mb-4 bg-black">
+              <video
+                className="w-full h-auto"
+                autoPlay
+                loop
+                muted
+                playsInline
+              >
+                <source src={InGameExample} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
             </div>
             <p className="text-gray-700 text-sm leading-relaxed">
               The streamer and moderators can <span className="font-bold text-green-600">use in-game commands</span> to create, delete, and refresh API tokens for Minecraft Redemptions.
@@ -41,9 +62,17 @@ function MinecraftServerModalContent() {
 
           {/* Example 3 */}
           <div className="bg-gray-50 rounded-2xl p-6">
-            <div className="bg-gray-300 rounded-xl h-48 mb-4 flex items-center justify-center text-gray-600">
-              {/* Placeholder for video/image */}
-              <span className="text-sm">Video: Auto Login/Logout</span>
+            <div className="rounded-xl overflow-hidden mb-4 bg-black">
+              <video
+                className="w-full h-auto"
+                autoPlay
+                loop
+                muted
+                playsInline
+              >
+                <source src={LoginExample} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
             </div>
             <p className="text-gray-700 text-sm leading-relaxed">
               When the streamer <span className="font-bold text-green-600">logs into</span> the server, Minecraft Redemptions are <span className="font-bold text-green-600">created</span> for viewers to use. When the streamer <span className="font-bold text-green-600">leaves</span> the server, redemptions are deleted and commands are <span className="font-bold text-green-600">disabled</span>.
@@ -52,9 +81,17 @@ function MinecraftServerModalContent() {
 
           {/* Example 4 */}
           <div className="bg-gray-50 rounded-2xl p-6">
-            <div className="bg-gray-300 rounded-xl h-48 mb-4 flex items-center justify-center text-gray-600">
-              {/* Placeholder for video/image */}
-              <span className="text-sm">Video: Channel Points</span>
+            <div className="rounded-xl overflow-hidden mb-4 bg-black">
+              <video
+                className="w-full h-auto"
+                autoPlay
+                loop
+                muted
+                playsInline
+              >
+                <source src={exampleOne} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
             </div>
             <p className="text-gray-700 text-sm leading-relaxed">
               Viewers in chat could use <span className="font-bold text-green-600">Channel Points</span> to spawn mobs, allowing viewers who didn't want to spend money to participate in the fun.
@@ -65,7 +102,7 @@ function MinecraftServerModalContent() {
       </div>
 
       {/* Impact Section */}
-      <div className="bg-gradient-to-r from-green-50 to-blue-50 rounded-2xl p-8 mb-8">
+      <div className="rounded-2xl p-8 mb-8" style={{ background: 'linear-gradient(to right, #f0fdf4, #eff6ff)' }}>
         <h3 className="text-2xl font-bold text-gray-900 mb-4">Impact & Achievements</h3>
         <p className="text-gray-700 leading-relaxed mb-4">
           This Minecraft Server, along with a few small robots we created, helped raise over <span className="font-bold text-green-600 text-lg">$18,000</span> alongside other streamers for <span className="font-bold text-green-600">Make-A-Wish</span>.
