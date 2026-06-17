@@ -1,3 +1,4 @@
+import Zoomable from '../Zoomable'
 import InChatExample from '../../assets/InChatExample.mp4'
 import InGameExample from '../../assets/InGameExample.mp4'
 import LoginExample from '../../assets/LoginExample.mp4'
@@ -5,12 +6,11 @@ import exampleOne from '../../assets/example_one.mp4'
 
 function Clip({ src, children }) {
   return (
-    <div className="media">
+    <Zoomable caption={children}>
       <video autoPlay loop muted playsInline>
         <source src={src} type="video/mp4" />
       </video>
-      <p>{children}</p>
-    </div>
+    </Zoomable>
   )
 }
 

@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import Zoomable from '../Zoomable'
 import orbinspireLanding from '../../assets/orbinspire-landing.jpg'
 import orbinspireCalendar from '../../assets/orbinspire-calendar.jpg'
 import orbinspireEventDetails from '../../assets/orbinspire-event-details.jpg'
@@ -8,40 +8,15 @@ import orbinspireEventsAdmin from '../../assets/orbinspire-events-admin.jpg'
 import orbinspireStoreHours from '../../assets/orbinspire-store-hours.jpg'
 import orbinspireUsers from '../../assets/orbinspire-users.jpg'
 
-function Shot({ src, alt, onOpen, children }) {
+function Shot({ src, alt, children }) {
   return (
-    <button type="button" className="media shot" onClick={() => onOpen({ src, alt, caption: children })}>
+    <Zoomable caption={children}>
       <img src={src} alt={alt} loading="lazy" />
-      <p>{children}</p>
-    </button>
-  )
-}
-
-function Lightbox({ shot, onClose }) {
-  useEffect(() => {
-    if (!shot) return
-    const onKey = (e) => e.key === 'Escape' && onClose()
-    window.addEventListener('keydown', onKey)
-    return () => window.removeEventListener('keydown', onKey)
-  }, [shot, onClose])
-
-  if (!shot) return null
-  return (
-    <div className="lightbox" onClick={onClose}>
-      <button type="button" className="lightbox-close" onClick={onClose} aria-label="Close">
-        ×
-      </button>
-      <figure className="lightbox-inner" onClick={(e) => e.stopPropagation()}>
-        <img src={shot.src} alt={shot.alt} />
-        <figcaption>{shot.caption}</figcaption>
-      </figure>
-    </div>
+    </Zoomable>
   )
 }
 
 export default function OrbinspireGamesAnswer() {
-  const [active, setActive] = useState(null)
-
   return (
     <div className="answer">
       <p className="meta">// react · typescript · convex · tailwind · vercel</p>
@@ -73,15 +48,15 @@ export default function OrbinspireGamesAnswer() {
 
       <h4>Public site</h4>
       <div className="media-grid">
-        <Shot src={orbinspireLanding} alt="OrbInspire Games landing page" onOpen={setActive}>
+        <Shot src={orbinspireLanding} alt="OrbInspire Games landing page">
           The <span className="accent">landing page</span> — store branding, game logos, and a quick
           overview of what the shop carries.
         </Shot>
-        <Shot src={orbinspireCalendar} alt="Events calendar" onOpen={setActive}>
+        <Shot src={orbinspireCalendar} alt="Events calendar">
           The <span className="accent">events calendar</span> — a monthly view of upcoming
           tournaments and game nights for customers to browse.
         </Shot>
-        <Shot src={orbinspireEventDetails} alt="Event details popup" onOpen={setActive}>
+        <Shot src={orbinspireEventDetails} alt="Event details popup">
           <span className="accent">Event details</span> — clicking an event pulls up the game type,
           format, entry fee, and time.
         </Shot>
@@ -89,23 +64,23 @@ export default function OrbinspireGamesAnswer() {
 
       <h4>Admin panel</h4>
       <div className="media-grid">
-        <Shot src={orbinspireDashboard} alt="Admin dashboard" onOpen={setActive}>
+        <Shot src={orbinspireDashboard} alt="Admin dashboard">
           The <span className="accent">dashboard</span> — the staff home screen, with upcoming events
           and a quick customer lookup by name or phone number.
         </Shot>
-        <Shot src={orbinspireCredit} alt="Customer store credit page" onOpen={setActive}>
+        <Shot src={orbinspireCredit} alt="Customer store credit page">
           <span className="accent">Customer credit</span> — a running balance and full transaction
           history; staff add new transactions from here.
         </Shot>
-        <Shot src={orbinspireEventsAdmin} alt="Events management" onOpen={setActive}>
+        <Shot src={orbinspireEventsAdmin} alt="Events management">
           <span className="accent">Events management</span> — where managers create, edit, and delete
           events.
         </Shot>
-        <Shot src={orbinspireStoreHours} alt="Store hours management" onOpen={setActive}>
+        <Shot src={orbinspireStoreHours} alt="Store hours management">
           <span className="accent">Store hours</span> — set and reorder the operating hours that
           display on the public site.
         </Shot>
-        <Shot src={orbinspireUsers} alt="User management" onOpen={setActive}>
+        <Shot src={orbinspireUsers} alt="User management">
           <span className="accent">User management</span> — an owner view for inviting staff,
           assigning roles, and managing team access.
         </Shot>
@@ -116,8 +91,6 @@ export default function OrbinspireGamesAnswer() {
           <span className="tag" key={t}>{t}</span>
         ))}
       </div>
-
-      <Lightbox shot={active} onClose={() => setActive(null)} />
     </div>
   )
 }

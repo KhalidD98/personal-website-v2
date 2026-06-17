@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import Zoomable from '../Zoomable'
 
 const STAGES = [
   { label: 'Ticket', sub: 'Linear', agent: false },
@@ -94,37 +94,6 @@ function PipelineDiagram() {
   )
 }
 
-function Zoomable({ children, caption }) {
-  const [open, setOpen] = useState(false)
-
-  useEffect(() => {
-    if (!open) return
-    const onKey = (e) => e.key === 'Escape' && setOpen(false)
-    window.addEventListener('keydown', onKey)
-    return () => window.removeEventListener('keydown', onKey)
-  }, [open])
-
-  return (
-    <>
-      <button type="button" className="media shot" onClick={() => setOpen(true)}>
-        <div className="diagram">{children}</div>
-        <p>{caption}</p>
-      </button>
-      {open && (
-        <div className="lightbox" onClick={() => setOpen(false)}>
-          <button type="button" className="lightbox-close" onClick={() => setOpen(false)} aria-label="Close">
-            ×
-          </button>
-          <figure className="lightbox-inner" onClick={(e) => e.stopPropagation()}>
-            <div className="diagram diagram-zoom">{children}</div>
-            <figcaption>{caption}</figcaption>
-          </figure>
-        </div>
-      )}
-    </>
-  )
-}
-
 export default function AutonomousAIPipelineAnswer() {
   return (
     <div className="answer">
@@ -143,7 +112,9 @@ export default function AutonomousAIPipelineAnswer() {
       </p>
 
       <Zoomable caption="The whole loop: ticket to merge, the spec-iteration and fix cycles, a fresh preview stack per PR, and the homelab infra underneath. Green steps run on their own; the rest are where I step in. Click to expand.">
-        <PipelineDiagram />
+        <div className="diagram">
+          <PipelineDiagram />
+        </div>
       </Zoomable>
 
       <h4>How it works</h4>

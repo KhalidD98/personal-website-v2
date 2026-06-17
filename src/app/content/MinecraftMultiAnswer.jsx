@@ -1,14 +1,14 @@
+import Zoomable from '../Zoomable'
 import exampleTwo from '../../assets/example_two.mp4'
 import exampleThree from '../../assets/example_three.mp4'
 
 function Clip({ src, children }) {
   return (
-    <div className="media">
+    <Zoomable caption={children}>
       <video autoPlay loop muted playsInline>
         <source src={src} type="video/mp4" />
       </video>
-      <p>{children}</p>
-    </div>
+    </Zoomable>
   )
 }
 
