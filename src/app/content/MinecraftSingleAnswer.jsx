@@ -60,10 +60,11 @@ export default function MinecraftSingleAnswer() {
 
       <h4>How it was built</h4>
       <p>
-        This was an almost 2-year process. It started simply — a $1 donation spawned a random mob or
-        potion effect — and grew to subscriptions triggering 5 random spawns. I learned to read
-        Channel Point Redemptions through the Twitch API and automated creating and deleting those
-        redemptions through in-game commands and login/logout events.
+        It took the better part of two years to get here. At first it was simple: a $1 donation
+        spawned a random mob or potion effect on the streamer. Then subs started triggering five
+        spawns at once, and I taught myself to pull Channel Point Redemptions from the Twitch API. By
+        the end the whole loop ran itself. Redemptions got created and deleted automatically based on
+        in-game commands and whether the streamer was logged in or out.
       </p>
 
       <div className="tags">

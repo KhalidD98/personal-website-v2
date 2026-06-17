@@ -102,6 +102,11 @@ button.media.shot{ font:inherit; color:inherit; text-align:left; width:100%; cur
 button.media.shot:hover{ border-color:var(--green); transform:translateY(-1px); }
 button.media.shot:focus-visible{ outline:2px solid var(--green); outline-offset:2px; }
 
+/* inline diagram (e.g. pipeline flow) */
+.diagram{ background:var(--card); border:1px solid var(--hair); border-radius:10px; padding:16px 14px; }
+.diagram svg{ display:block; width:100%; height:auto; }
+.lightbox-inner .diagram-zoom{ width:min(1100px,92vw); padding:28px 26px; }
+
 /* lightbox */
 .lightbox{ position:fixed; inset:0; z-index:1000; background:rgba(22,21,18,.84);
   display:flex; align-items:center; justify-content:center; padding:32px;
