@@ -1,4 +1,5 @@
 import AutonomousAIPipelineAnswer from './content/AutonomousAIPipelineAnswer'
+import OrbinspireGamesAnswer from './content/OrbinspireGamesAnswer'
 import MinecraftSingleAnswer from './content/MinecraftSingleAnswer'
 import MinecraftMultiAnswer from './content/MinecraftMultiAnswer'
 import PersonalWebsiteAnswer from './content/PersonalWebsiteAnswer'
@@ -17,6 +18,14 @@ export const CHATS = [
     title: 'Autonomous AI Development Pipeline',
     question: 'Tell me about the Autonomous AI Development Pipeline.',
     Content: AutonomousAIPipelineAnswer,
+  },
+  {
+    id: 'orbinspire-games',
+    group: 'Projects',
+    icon: 'chat',
+    title: 'OrbInspire Games — Game Shop Web App',
+    question: 'Tell me about the OrbInspire Games project.',
+    Content: OrbinspireGamesAnswer,
   },
   {
     id: 'minecraft-single',

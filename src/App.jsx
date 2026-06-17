@@ -31,7 +31,7 @@ export default function App() {
 
   return (
     <div className={`app${drawerOpen ? ' drawer-open' : ''}`}>
-      <Sidebar selected={selected} onSelect={select} onClose={() => setDrawerOpen(false)} />
+      <Sidebar selected={selected} onSelect={select} />
       <div className="scrim" onClick={() => setDrawerOpen(false)} />
 
       <section className="main">

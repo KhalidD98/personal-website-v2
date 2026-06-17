@@ -1,13 +1,13 @@
 import { useState } from 'react'
 import { CHATS, GROUPS } from './chats'
-import { Star, Chat, Briefcase, Mail, Search, ChevLeft } from './icons'
+import { Chat, Briefcase, Mail, Search } from './icons'
 import profilePicture from '../assets/profilePicture.png'
 
 function ChatIcon({ kind }) {
   return kind === 'briefcase' ? <Briefcase className="ic" /> : <Chat className="ic" />
 }
 
-export default function Sidebar({ selected, onSelect, onClose }) {
+export default function Sidebar({ selected, onSelect }) {
   const [query, setQuery] = useState('')
   const q = query.trim().toLowerCase()
 
@@ -15,12 +15,8 @@ export default function Sidebar({ selected, onSelect, onClose }) {
     <aside className="sb">
       <div className="sb-top">
         <div className="brand">
-          <Star className="star" />
           Khalid Dakak
         </div>
-        <button className="iconbtn" onClick={onClose} aria-label="Close sidebar">
-          <ChevLeft className="" style={{ width: 18, height: 18 }} />
-        </button>
       </div>
 
       <button
