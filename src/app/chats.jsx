@@ -1,3 +1,4 @@
+import ImmigrationAssistantAnswer from './content/ImmigrationAssistantAnswer'
 import AutonomousAIPipelineAnswer from './content/AutonomousAIPipelineAnswer'
 import OrbinspireGamesAnswer from './content/OrbinspireGamesAnswer'
 import MinecraftSingleAnswer from './content/MinecraftSingleAnswer'
@@ -11,6 +12,14 @@ import AccessMyResearchAnswer from './content/AccessMyResearchAnswer'
 // `question` is the "You" turn; `Content` renders the "KD" answer.
 export const CHATS = [
   // ---- Projects ----
+  {
+    id: 'immigration-assistant',
+    group: 'Projects',
+    icon: 'chat',
+    title: 'Claude Code Immigration Assistant',
+    question: 'Tell me about the Claude Code immigration assistant.',
+    Content: ImmigrationAssistantAnswer,
+  },
   {
     id: 'ai-pipeline',
     group: 'Projects',
