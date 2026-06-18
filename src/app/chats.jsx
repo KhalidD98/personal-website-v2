@@ -4,6 +4,7 @@ import OrbinspireGamesAnswer from './content/OrbinspireGamesAnswer'
 import MinecraftSingleAnswer from './content/MinecraftSingleAnswer'
 import MinecraftMultiAnswer from './content/MinecraftMultiAnswer'
 import PersonalWebsiteAnswer from './content/PersonalWebsiteAnswer'
+import TorqAnswer from './content/TorqAnswer'
 import LineleaderAnswer from './content/LineleaderAnswer'
 import KadinceAnswer from './content/KadinceAnswer'
 import AccessMyResearchAnswer from './content/AccessMyResearchAnswer'
@@ -61,6 +62,14 @@ export const CHATS = [
     Content: PersonalWebsiteAnswer,
   },
   // ---- Experience ----
+  {
+    id: 'torq',
+    group: 'Experience',
+    icon: 'briefcase',
+    title: 'Torq — Software Engineering Consultant',
+    question: 'What do you do at Torq?',
+    Content: TorqAnswer,
+  },
   {
     id: 'lineleader',
     group: 'Experience',
