@@ -8,11 +8,20 @@ import TorqAnswer from './content/TorqAnswer'
 import LineleaderAnswer from './content/LineleaderAnswer'
 import KadinceAnswer from './content/KadinceAnswer'
 import AccessMyResearchAnswer from './content/AccessMyResearchAnswer'
+import AmologAnswer from './content/AmologAnswer'
 
 // The chat registry. Each entry becomes a sidebar item and a conversation view.
 // `question` is the "You" turn; `Content` renders the "KD" answer.
 export const CHATS = [
   // ---- Projects ----
+  {
+    id: 'amolog',
+    group: 'Projects',
+    icon: 'chat',
+    title: 'Amolog - Gelato Operations Platform',
+    question: 'Tell me about Amolog.',
+    Content: AmologAnswer,
+  },
   {
     id: 'immigration-assistant',
     group: 'Projects',
